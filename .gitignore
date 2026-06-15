@@ -33,25 +33,44 @@ ENV/
 *.swp
 *.swo
 *~
+.project
+.pydevproject
+.settings/
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# YOLO weights and training results
-*.pt
+# Model weights (too large for Git)
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.engine
+
+# Training results and logs
+data/results/
 runs/
-paper_results/
+logs/
+*.log
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
 temp_data.yaml
-substation_detection.db
-
-# Model weights directory
-biandianzhan/weights/
-biandianzhan/train_batch*.jpg
-biandianzhan/val_batch*
-
-# OS
+*.tmp
+*.bak
+*.swp
 .DS_Store
 Thumbs.db
+nul
 
-# Logs
-*.log
+# YOLO specific
+*.yaml.bak
+ultralytics/
+
+# Generated images in results
+data/results/*.jpg
+data/results/*.png
+data/results/*.csv
